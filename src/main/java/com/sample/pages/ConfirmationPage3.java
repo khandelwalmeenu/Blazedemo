@@ -33,18 +33,14 @@ public class ConfirmationPage3 extends BaseUI {
 		this.driver=driver;
 		this.logger = logger;
 	}
-	public void screenshot() throws IOException{
+	public void confirmscreenshot() throws IOException{
+		screenshot("confirm");
 		
 		
 		
-		TakesScreenshot takescr = ((TakesScreenshot)driver);
-		File src = takescr.getScreenshotAs(OutputType.FILE);
-		
-		FileUtils.copyFile (src, new File(System.getProperty("user.dir") + "/Screenshots/m.jpg"));
-		logger.log(Status.INFO, "screenshot is taken");
-
 	}
-	}
+}
+	
 //public static String getscreenshot(String name,TakesScreenshot tsrc) {
 //	try {
 //		String repname=name+BaseUI.Date+".jpg";
@@ -60,5 +56,6 @@ public class ConfirmationPage3 extends BaseUI {
 //			return null;
 //			
 //		}
-//}
+
+
 

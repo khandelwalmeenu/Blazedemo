@@ -1,5 +1,7 @@
 package com.sample.utils;
 
+import java.io.IOException;
+
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
@@ -29,16 +31,23 @@ public class ListenerUtils extends TestListenerAdapter {
 	}
 	public   void onTestSucess(ITestResult result) {
 		logger.log(Status.PASS,MarkupHelper.createLabel(result.getName(),ExtentColor.GREEN));
-		logger.log(Status.PASS,"Testcase passed");
+		//logger.log(Status.PASS,"Testcase passed");
+		logger.addScreenCaptureFromPath(BaseUI.screenshot("pass"));
 	}
 	public  void onTestFailure(ITestResult result) {
 	logger.log(Status.FAIL,MarkupHelper.createLabel(result.getName(),ExtentColor.RED));
-	logger.log(Status.FAIL,"Testcase failed");
-}
+	//logger.log(Status.FAIL,"Testcase failed");
+	logger.addScreenCaptureFromPath(BaseUI.screenshot("failer"));
+	} 
+	
+		
+
 	public  void onTestSkip(ITestResult result) {
 		logger.log(Status.SKIP,MarkupHelper.createLabel(result.getName(),ExtentColor.ORANGE));
 		logger.log(Status.SKIP,"Testcase skipped");
-}
+
+
+	}
 	public  void onFinish(ITestContext contest) {
 		extent.flush();
 	}

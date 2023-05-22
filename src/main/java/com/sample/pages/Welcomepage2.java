@@ -18,11 +18,9 @@ public class Welcomepage2 extends BaseUI {
 	public WebDriver driver;
 	
 	 By departurefrom=getLocator("departurefrom_name");
-   
-	By destinationto=getLocator("destinationto_xpath");
-	
-	By findFlights = getLocator("flights_xpath");
-   By ChooseThisFlight=getLocator("ChooseThisFlight_xpath");
+     By destinationto=getLocator("destinationto_name");
+	 By findFlights = getLocator("flights_xpath");
+     By ChooseThisFlight=getLocator("ChooseThisFlight_xpath");
 
 	
 	public Welcomepage2(WebDriver driver,ExtentTest logger) {
@@ -32,23 +30,23 @@ public class Welcomepage2 extends BaseUI {
 	}
 	
 	public void Departurefrom(String Boston) throws InterruptedException  {
-		Thread.sleep(5000);
-		sendText(departurefrom,Boston);
+		//Thread.sleep(5000);
+		dropdown(departurefrom,Boston);
 	}
 	
-//	public void Destinationto() throws InterruptedException {
-//		Thread.sleep(5000);
-//		clickOn(destinationto);
-//		//logger.log(Status.INFO, "enter the destination city");
-//		
-//	}
-//	
-//	public void clickfindFlight() {
-//		clickOn(findFlights);
-//	}
-//	 public void Choose_ThisFlight() {
-//			clickOn(ChooseThisFlight);
-//		}
+	public void Destinationto(String london) throws InterruptedException {
+		//Thread.sleep(5000);
+		dropdown(destinationto, london);
+		logger.log(Status.INFO, "enter the destination city");
+		
+	}
+	
+	public void clickfindFlight() {
+		clickOn(findFlights, Duration.ofSeconds(30));
+	}
+	 public void Choose_ThisFlight() {
+			clickOn(ChooseThisFlight, Duration.ofSeconds(30));
+		}
 
 		
 	}

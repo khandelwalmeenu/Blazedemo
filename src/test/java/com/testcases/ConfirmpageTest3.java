@@ -44,33 +44,27 @@ public class ConfirmpageTest3 extends BaseUI {
 		
 	
 	@Test
-public void Screenshot() throws IOException{
+public void Screenshot() 
+	{
 	
 	ConfirmationPage3 wlc = new ConfirmationPage3(driver,logger);
 	
-	wlc.screenshot();
+	try {
+		wlc.confirmscreenshot();
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 
 }
-}
-//(dependsOnMethods = "passwordtest")
-//@AfterMethod
-//public void getResult(ITestResult result) {
-//	if(result.getStatus()==ITestResult.FAILURE) {
-//	logger.log(Status.FAIL,result.getThrowable());
-//	}
-//	else if (result.getStatus()==ITestResult.SUCCESS) {
-//	logger.log(Status.PASS, result.getTestName());
-//}
-//  else {
-//	logger.log(Status.SKIP,result.getTestName());
-//	}
-//}
-//@AfterTest
-	//public void kill() {
-	//driver.close();
+
+
+@AfterTest
+	public void kill() {
+	driver.close();
 		
 	
-	//	report.flush();
+}
 	
 }
 

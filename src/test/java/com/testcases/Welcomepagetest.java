@@ -45,14 +45,15 @@ public class Welcomepagetest extends BaseUI {
 	public void enterdeparture(String Boston) throws InterruptedException {
 		Welcomepage homepage=new Welcomepage();
 		homepage.DepartureFrom();
-//		homepage.departureOption();
-//		homepage.DestinationTo();
-//		homepage.DestinationOption();
-//		homepage.clickfindFlight();
-//		homepage.Choose_ThisFlight();
-		@DataProvider(name="testdata")
-		public Object[][] testdata(){
-			testdata=FileIO.datahandling("Sheet1");
+		homepage.departureOption();
+		homepage.DestinationTo();
+		homepage.DestinationOption();
+		homepage.clickfindFlight();
+		homepage.Choose_ThisFlight();
+	}
+	@DataProvider(name="testdata")
+		public Object[][] testdata() throws IOException{
+			testdata=FileIO.datahandling("Sheet3");
 			return testdata;
 	}
 	

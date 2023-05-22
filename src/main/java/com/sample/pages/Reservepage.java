@@ -70,12 +70,13 @@ public class Reservepage extends BaseUI {
 		public void purchase_Flight() {
 			clickOn(purchaseFlight,Duration.ofSeconds(10));
 		}
+}
 	
 		
 		
 	
 		
-		}
+		
 
 
 //properties.setProperty("prop1", "Value1");

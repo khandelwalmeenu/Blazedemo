@@ -2,6 +2,7 @@ package com.testcases;
 
 import java.io.IOException;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
@@ -39,7 +40,6 @@ public class Reservepagetest2 extends BaseUI {
 		hp.State(data[3]);
 		hp.Zip_Code(data[4]);
 		hp.Credit_CardNumber(data[5]);
-		
 		hp.Month(data[6]);
 		hp.Year(data[7]);
 		hp.NameOn_Card(data[8]);
@@ -52,12 +52,7 @@ public class Reservepagetest2 extends BaseUI {
 		testdata=FileIO.datahandling("sheet2");
 		return testdata;
 	}
-
-
-	
-	
-
-//	@AfterTest
+@AfterTest
 	public void kill() throws InterruptedException {
 		Thread.sleep(5000);
 		driver.close();

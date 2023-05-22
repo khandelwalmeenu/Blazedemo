@@ -28,28 +28,28 @@ public class Welcomepage extends BaseUI {
 	
 	public void DepartureFrom() throws InterruptedException {
 		Thread.sleep(5000);
-		clickOn1(departurefrom,Duration.ofSeconds(5000));
+		clickOn(departurefrom,Duration.ofSeconds(5000));
 	}
 	
 	public void departureOption() {
-		clickOn1(departureoption,Duration.ofSeconds(5000));
+		clickOn(departureoption,Duration.ofSeconds(5000));
 			
 	}
 	
 	
 	public void DestinationTo() {
-		clickOn1(destinationto,Duration.ofSeconds(5000));
+		clickOn(destinationto,Duration.ofSeconds(5000));
 		
 		
 	}
 	public void DestinationOption() {
-		clickOn1(destinationoption,Duration.ofSeconds(5000));
+		clickOn(destinationoption,Duration.ofSeconds(5000));
 	}
 	public void clickfindFlight() {
-		clickOn1(findFlights,Duration.ofSeconds(5000));
+		clickOn(findFlights,Duration.ofSeconds(5000));
 	}
 	 public void Choose_ThisFlight() {
-			clickOn1(ChooseThisFlight,Duration.ofSeconds(30));
+			clickOn(ChooseThisFlight,Duration.ofSeconds(30));
 		}
 
 		

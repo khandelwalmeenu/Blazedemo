@@ -2,16 +2,23 @@ package com.sample.base;
 
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.sample.utils.DateUtils;
 import com.sample.utils.FileIO;
 
@@ -58,6 +65,10 @@ public class BaseUI {
 
 	// invoke Browser....
 	public static By getLocator(String locatorKey) {
+		if(locatorKey.endsWith("_name")) {
+			
+			return By.name(prop.getProperty(locatorKey));
+		}
 		
 		if (locatorKey.endsWith("_id")) {
 			return By.id(prop.getProperty(locatorKey));
@@ -83,11 +94,21 @@ public class BaseUI {
 			return By.partialLinkText(prop.getProperty(locatorKey));
 
 		}
-		return null;
+		else return null;
+		
 	}
 
 	// ******check if an element is present****
 	public static boolean isElementPresent(By locator, Duration timeout) {
+		try {
+			new WebDriverWait(driver, timeout).until(ExpectedConditions.presenceOfElementLocated(locator));
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
+	// ******check if an element is Displayed****
+	public static boolean isDisplayed(By locator, Duration timeout) {
 		try {
 			new WebDriverWait(driver, timeout).until(ExpectedConditions.presenceOfElementLocated(locator));
 			return true;
@@ -147,8 +168,24 @@ public class BaseUI {
 				e.printStackTrace();
 			}
 			}
+		public static String screenshot(String name) {
+			
+			
+			
+			TakesScreenshot takescr = ((TakesScreenshot)driver);
+			File src = takescr.getScreenshotAs(OutputType.FILE);
+			
+			try {
+				FileUtils.copyFile (src, new File(System.getProperty("user.dir") + "/Screenshots/"+name+timestamp+".jpg"));
+			} catch (IOException e) {
+				
+				e.printStackTrace();
+			}
+			logger.log(Status.INFO, "screenshot is taken");
+return System.getProperty("user.dir") + "/Screenshots/"+name+".jpg";
+		}
 		
-		//public  void clear() {
+
 			
 			
 			}
