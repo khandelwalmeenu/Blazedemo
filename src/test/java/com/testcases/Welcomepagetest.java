@@ -6,8 +6,10 @@ import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -33,7 +35,7 @@ public class Welcomepagetest extends BaseUI {
 	 String[][] testdata;
    
 
-	@BeforeTest
+	@BeforeClass
 	public void setup() {
 		
 		driver = invokeBrowser();
@@ -43,7 +45,7 @@ public class Welcomepagetest extends BaseUI {
 	
 	@Test(dataProvider="testdata")
 	public void enterdeparture(String Boston) throws InterruptedException {
-		Welcomepage homepage=new Welcomepage();
+		Welcomepage homepage=new Welcomepage(driver,logger);
 		homepage.DepartureFrom();
 		homepage.departureOption();
 		homepage.DestinationTo();
@@ -58,14 +60,15 @@ public class Welcomepagetest extends BaseUI {
 	}
 	
 
-	}
+	
 
-//@AfterTest
-	//public void kill() {
-	//driver.close();
+//@AfterClass
+	public void kill() {
+	driver.close();
+}}
 		
 	
-	//	report.flush();
+		
 	
 
 

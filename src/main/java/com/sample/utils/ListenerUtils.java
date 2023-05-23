@@ -32,7 +32,7 @@ public class ListenerUtils extends TestListenerAdapter {
 	public   void onTestSucess(ITestResult result) {
 		logger.log(Status.PASS,MarkupHelper.createLabel(result.getName(),ExtentColor.GREEN));
 		//logger.log(Status.PASS,"Testcase passed");
-		logger.addScreenCaptureFromPath(BaseUI.screenshot("pass"));
+		
 	}
 	public  void onTestFailure(ITestResult result) {
 	logger.log(Status.FAIL,MarkupHelper.createLabel(result.getName(),ExtentColor.RED));

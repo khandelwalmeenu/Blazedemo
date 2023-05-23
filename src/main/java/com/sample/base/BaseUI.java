@@ -1,6 +1,7 @@
 package com.sample.base;
 
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -31,6 +32,7 @@ public class BaseUI {
     public static ExtentTest logger;
 	public BaseUI() {
 		prop = FileIO.initProperties();
+		
 	}
 
 	//invoke Browser;
@@ -62,7 +64,7 @@ public class BaseUI {
 			e.printStackTrace();
 		}
 	}
-
+	
 	// invoke Browser....
 	public static By getLocator(String locatorKey) {
 		if(locatorKey.endsWith("_name")) {
@@ -74,11 +76,12 @@ public class BaseUI {
 			return By.id(prop.getProperty(locatorKey));
 
 		}
-		if (locatorKey.endsWith("_className")) {
+		if (locatorKey.endsWith("_class")) {
 			return By.className(prop.getProperty(locatorKey));
 		}
 
 		if (locatorKey.endsWith("_xpath")) {
+			System.out.println(prop.getProperty(locatorKey));
 			return By.xpath(prop.getProperty(locatorKey));
 		}
 
@@ -94,7 +97,10 @@ public class BaseUI {
 			return By.partialLinkText(prop.getProperty(locatorKey));
 
 		}
-		else return null;
+		 return null;
+		
+		
+		
 		
 	}
 

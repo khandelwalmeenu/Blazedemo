@@ -5,7 +5,10 @@ package com.testcases;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
@@ -26,11 +29,12 @@ public class Welcomepagetest2 extends BaseUI {
 	String[][] testdata;
    
 
-	@BeforeTest
+	@BeforeClass
 	public void setup(){
 		
 		driver = invokeBrowser();
 		navigateToUrl("websiteURL");
+		
 	}
 
 	
@@ -40,14 +44,16 @@ public class Welcomepagetest2 extends BaseUI {
 		homepage.Departurefrom(Boston);
 		homepage.Destinationto(london);
 		homepage.clickfindFlight();
+		
 		homepage.Choose_ThisFlight();
+		
 	}
 	@DataProvider(name="testdata")
 	public Object[][] testdata() throws IOException{
 		testdata=FileIO.datahandling("Sheet3");
 		return testdata;
 	}
-	@AfterTest
+	@AfterClass
 	public void kill() {
 	driver.close();
 }

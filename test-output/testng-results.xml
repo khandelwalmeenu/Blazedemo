@@ -1,17 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-19T22:08:40 CDT" name="Default suite" finished-at="2023-05-19T22:08:44 CDT" duration-ms="3703">
+  <suite started-at="2023-05-22T23:03:17 CDT" name="Suite" finished-at="2023-05-22T23:03:38 CDT" duration-ms="21354">
     <groups>
     </groups>
-    <test started-at="2023-05-19T22:08:40 CDT" name="Default test" finished-at="2023-05-19T22:08:44 CDT" duration-ms="3703">
-      <class name="com.testcases.Welcomepagetest2">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.testcases.Welcomepagetest2@5223e5ee]" started-at="2023-05-19T22:08:40 CDT" name="setup" finished-at="2023-05-19T22:08:44 CDT" duration-ms="3211" status="PASS">
+    <test started-at="2023-05-22T23:03:17 CDT" name="Test" finished-at="2023-05-22T23:03:38 CDT" duration-ms="21354">
+      <class name="com.testcases.ConfirmpageTest3">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.testcases.ConfirmpageTest3@49d904ec]" started-at="2023-05-22T23:03:34 CDT" name="setup" finished-at="2023-05-22T23:03:36 CDT" duration-ms="1820" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="enterdeparture(java.lang.String,java.lang.String)[pri:1, instance:com.testcases.Welcomepagetest2@5223e5ee]" started-at="2023-05-19T22:08:44 CDT" name="enterdeparture" data-provider="testdata" finished-at="2023-05-19T22:08:44 CDT" duration-ms="9" status="FAIL">
+        <test-method signature="Screenshot()[pri:0, instance:com.testcases.ConfirmpageTest3@49d904ec]" started-at="2023-05-22T23:03:36 CDT" name="Screenshot" finished-at="2023-05-22T23:03:36 CDT" duration-ms="162" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Screenshot -->
+        <test-method is-config="true" signature="kill()[pri:0, instance:com.testcases.ConfirmpageTest3@49d904ec]" started-at="2023-05-22T23:03:36 CDT" name="kill" finished-at="2023-05-22T23:03:36 CDT" duration-ms="143" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- kill -->
+      </class> <!-- com.testcases.ConfirmpageTest3 -->
+      <class name="com.testcases.HomepageTest4">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.testcases.HomepageTest4@48e4374]" started-at="2023-05-22T23:03:36 CDT" name="setup" finished-at="2023-05-22T23:03:38 CDT" duration-ms="2058" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="sendText_details([Ljava.lang.String;)[pri:1, instance:com.testcases.HomepageTest4@48e4374]" started-at="2023-05-22T23:03:38 CDT" name="sendText_details" data-provider="testdata" finished-at="2023-05-22T23:03:38 CDT" duration-ms="419" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@691567ea]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendText_details -->
+        <test-method is-config="true" signature="kill()[pri:0, instance:com.testcases.HomepageTest4@48e4374]" started-at="2023-05-22T23:03:38 CDT" name="kill" finished-at="2023-05-22T23:03:38 CDT" duration-ms="136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- kill -->
+      </class> <!-- com.testcases.HomepageTest4 -->
+      <class name="com.testcases.Reservepagetest2">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.testcases.Reservepagetest2@3ba9ad43]" started-at="2023-05-22T23:03:21 CDT" name="setup" finished-at="2023-05-22T23:03:23 CDT" duration-ms="1741" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="sendText([Ljava.lang.String;)[pri:1, instance:com.testcases.Reservepagetest2@3ba9ad43]" started-at="2023-05-22T23:03:23 CDT" name="sendText" data-provider="testdata" finished-at="2023-05-22T23:03:29 CDT" duration-ms="5790" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@de77146]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendText -->
+        <test-method is-config="true" signature="kill()[pri:0, instance:com.testcases.Reservepagetest2@3ba9ad43]" started-at="2023-05-22T23:03:29 CDT" name="kill" finished-at="2023-05-22T23:03:34 CDT" duration-ms="5169" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- kill -->
+      </class> <!-- com.testcases.Reservepagetest2 -->
+      <class name="com.testcases.Welcomepagetest2">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.testcases.Welcomepagetest2@659a969b]" started-at="2023-05-22T23:03:17 CDT" name="setup" finished-at="2023-05-22T23:03:20 CDT" duration-ms="2892" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="enterdeparture(java.lang.String,java.lang.String)[pri:1, instance:com.testcases.Welcomepagetest2@659a969b]" started-at="2023-05-22T23:03:20 CDT" name="enterdeparture" data-provider="testdata" finished-at="2023-05-22T23:03:21 CDT" duration-ms="536" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -24,51 +80,14 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[Cannot find elements when the XPath is null.]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Cannot find elements when the XPath is null.
-at org.openqa.selenium.internal.Require$ArgumentChecker.nonNull(Require.java:207)
-at org.openqa.selenium.By$ByXPath.<init>(By.java:287)
-at org.openqa.selenium.By.xpath(By.java:89)
-at com.sample.base.BaseUI.getLocator(BaseUI.java:82)
-at com.sample.pages.Welcomepage2.<init>(Welcomepage2.java:23)
-at com.testcases.Welcomepagetest2.enterdeparture(Welcomepagetest2.java:39)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterdeparture -->
+        <test-method is-config="true" signature="kill()[pri:0, instance:com.testcases.Welcomepagetest2@659a969b]" started-at="2023-05-22T23:03:21 CDT" name="kill" finished-at="2023-05-22T23:03:21 CDT" duration-ms="116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- kill -->
       </class> <!-- com.testcases.Welcomepagetest2 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

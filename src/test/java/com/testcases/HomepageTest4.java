@@ -2,7 +2,9 @@ package com.testcases;
 
 import java.io.IOException;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
@@ -18,7 +20,7 @@ public class HomepageTest4 extends BaseUI {
 	WebDriver driver;
 	String[][]testdata;
 
-	@BeforeMethod
+	@BeforeClass
 	public void setup() {
 		driver = invokeBrowser();
 		navigateToUrl("websiteURL_L");
@@ -68,7 +70,7 @@ public class HomepageTest4 extends BaseUI {
 //}
 
 
-@AfterTest
+@AfterClass
 	public void kill() {
 	driver.close();
 		
